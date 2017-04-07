@@ -22,3 +22,4 @@ I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Properties
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.GenerateResource.Cache
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
+I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.Search.resources

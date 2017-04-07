@@ -185,6 +185,7 @@
             this.label11.Size = new System.Drawing.Size(48, 26);
             this.label11.TabIndex = 44;
             this.label11.Text = "Jane";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -295,6 +296,7 @@
             this.MaximizeBox = false;
             this.Name = "Form4";
             this.Text = "Contact Details";
+            this.Load += new System.EventHandler(this.Form4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

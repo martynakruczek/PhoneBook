@@ -262,7 +262,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(78, 212);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2017, 4, 4, 0, 0, 0, 0);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2100, 4, 4, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(149, 20);
             this.dateTimePicker1.TabIndex = 24;

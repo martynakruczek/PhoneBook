@@ -29,10 +29,22 @@ namespace PhoneBook
             pictureBox1.BackgroundImage = null;
             this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
+            Person p = new Person();
+            p.FirstName = textBox1.Text;
+            p.LastName = textBox2.Text;
+            p.PhoneNumber = textBox3.Text;
+            p.Email = textBox4.Text;
+            p.BirthDate = dateTimePicker1.Value;
+            p.Street = textBox6.Text;
+            p.PostalCode = textBox7.Text;
+            p.City = textBox8.Text;
 
+
+
+            ComC.people.Add(p);
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -44,25 +56,10 @@ namespace PhoneBook
             
         }
 
-        class Person{
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public string PhoneNumber { get; set; }
-            public string Email { get; set; }
-            public DateTime BirthDate { get; set; }
-            public string Street { get; set; }
-            public string PostalCode { get; set; }
-            public string City { get; set; }
 
-        }
 
         private void Form2_Load(object sender, EventArgs e) {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 
-            if (!Directory.Exists(path + "\\Address Book"))
-                Directory.CreateDirectory(path + "\\Address Book");
-            if (!File.Exists(path + "\\Address Book\\settings.xml"))
-                File.Create(path + "\\Address Book\\settings.xml");
         }
     }
 }

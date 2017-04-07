@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace PhoneBook
 {
-    public partial class Form3 : Form
+    public partial class Search : Form
     {
-        public Form3() {
+        public Search() {
             InitializeComponent();
         }
-        public Form3(Person p) {
-            InitializeComponent();
-            greetings.Text = "It's " + p.FirstName + " " + p.LastName + " birthday today!";
-        }
-        private void pictureBox1_Click(object sender, EventArgs e) {
 
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            ComC.Condition = textBox1.Text;
+            Close();
         }
     }
 }

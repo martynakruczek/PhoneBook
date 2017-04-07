@@ -31,11 +31,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,14 +102,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(174, 133);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(365, 193);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.SeaShell;
@@ -119,7 +111,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Edit";
+            this.button5.Text = "Details";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -155,16 +147,24 @@
             this.linkLabel1.Text = "Edit Avatar";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(177, 135);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(362, 186);
+            this.listBox1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(551, 338);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -175,6 +175,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "My Phone Book";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,11 +190,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

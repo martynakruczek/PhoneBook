@@ -10,37 +10,43 @@ using System.Windows.Forms;
 
 namespace PhoneBook
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        Form2 AddForm;
-        Form4 ContactDetails;
-        Form3 Birthday;
+        AddContact AddForm;
+        ContactDetails ContactDetails;
+        BirthdayAlert Birthday;
         Search Search;
-        public Form1() {
+        public MainForm() {
             InitializeComponent();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddForm = new Form2();
-            AddForm.Show();
+            AddForm = new AddContact();
+            AddForm.ShowDialog();
+            contactList.Items.Clear();
+
+            foreach (var item in ComC.people) {
+                contactList.Items.Add(item.FirstName + " " + item.LastName);
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex >= 0) {
-                ComC.ContactIndex = listBox1.SelectedIndex;
-                listBox1.Items.RemoveAt(ComC.ContactIndex);
+            if (contactList.SelectedIndex >= 0) {
+                ComC.ContactIndex = contactList.SelectedIndex;
+                contactList.Items.RemoveAt(ComC.ContactIndex);
                 ComC.people.RemoveAt(ComC.ContactIndex);
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if(listBox1.SelectedIndex >= 0) {
-                ComC.ContactIndex = listBox1.SelectedIndex;
-                ContactDetails = new Form4();
+            if(contactList.SelectedIndex >= 0) {
+                ComC.ContactIndex = contactList.SelectedIndex;
+                ContactDetails = new ContactDetails();
                 ContactDetails.ShowDialog();
             }
             
@@ -53,24 +59,24 @@ namespace PhoneBook
             Search.ShowDialog();
 
             if (ComC.Condition != "") {
-                listBox1.Items.Clear();
+                contactList.Items.Clear();
 
                 foreach (var item in ComC.people.Where(x => x.FirstName == ComC.Condition)) {
-                    listBox1.Items.Add(item.FirstName);
+                    contactList.Items.Add(item.FirstName + " " + item.LastName);
                 }
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            contactList.Items.Clear();
 
             foreach (var item in ComC.people) {
-                listBox1.Items.Add(item.FirstName +" "+ item.LastName);
+                contactList.Items.Add(item.FirstName +" "+ item.LastName);
             }
             foreach (var item in ComC.people) {
                 if (item.BirthDate.Date.Month == DateTime.Today.Month && item.BirthDate.Date.Day == DateTime.Today.Day) {
-                    Birthday = new Form3(item);
+                    Birthday = new BirthdayAlert(item);
                     Birthday.ShowDialog();
                 }
             }
@@ -79,9 +85,9 @@ namespace PhoneBook
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.ShowDialog();
-            pictureBox1.ImageLocation = openFileDialog1.FileName;
-            pictureBox1.BackgroundImage = null;
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            avatar.ImageLocation = openFileDialog1.FileName;
+            avatar.BackgroundImage = null;
+            avatar.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -91,15 +97,16 @@ namespace PhoneBook
 
         private void Form1_Load(object sender, EventArgs e) {
 
-            listBox1.Items.Clear();
+            contactList.Items.Clear();
 
             foreach (var item in ComC.people) {
-                listBox1.Items.Add(item.FirstName);
+                contactList.Items.Add(item.FirstName + " " + item.LastName);
+
             }
 
             foreach (var item in ComC.people) {
                 if(item.BirthDate.Date.Month == DateTime.Today.Month && item.BirthDate.Date.Day == DateTime.Today.Day) {
-                    Birthday = new Form3(item);
+                    Birthday = new BirthdayAlert(item);
                     Birthday.ShowDialog();
                 }
             }

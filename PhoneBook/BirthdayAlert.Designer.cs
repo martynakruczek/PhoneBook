@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook
 {
-    partial class Form3
+    partial class BirthdayAlert
     {
         /// <summary>
         /// Required designer variable.
@@ -25,7 +25,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BirthdayAlert));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.greetings = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();

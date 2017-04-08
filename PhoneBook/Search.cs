@@ -24,5 +24,13 @@ namespace PhoneBook
             ComC.Condition = textBox1.Text;
             Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+
+        }
+
+        private void closeButton_Click(object sender, EventArgs e) {
+            Close();
+        }
     }
 }

@@ -18,6 +18,7 @@ namespace PhoneBook
         public string Street { get; set; }
         public string PostalCode { get; set; }
         public string City { get; set; }
+        public string Avatar { get; set; }
 
     }
     public static class ComC {
@@ -26,7 +27,7 @@ namespace PhoneBook
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
         public static List<Person> people { get; set; }
         static ComC(){

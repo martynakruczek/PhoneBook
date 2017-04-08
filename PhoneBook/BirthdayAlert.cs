@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace PhoneBook
 {
-    public partial class Form3 : Form
+    public partial class BirthdayAlert : Form
     {
-        public Form3() {
+        public BirthdayAlert() {
             InitializeComponent();
         }
-        public Form3(Person p) {
+        public BirthdayAlert(Person p) {
             InitializeComponent();
             greetings.Text = "It's " + p.FirstName + " " + p.LastName + " birthday today!";
         }

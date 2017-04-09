@@ -158,7 +158,6 @@
             this.contactList.Location = new System.Drawing.Point(177, 135);
             this.contactList.Name = "contactList";
             this.contactList.Size = new System.Drawing.Size(362, 184);
-            this.contactList.Sorted = true;
             this.contactList.TabIndex = 8;
             // 
             // MainForm

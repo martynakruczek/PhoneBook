@@ -14,8 +14,10 @@ namespace PhoneBook
     {
         AddContact AddForm;
         ContactDetails ContactDetails;
+        EditContact EditContact;
         BirthdayAlert Birthday;
         Search Search;
+
         public MainForm() {
             InitializeComponent();
 
@@ -23,14 +25,33 @@ namespace PhoneBook
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddForm = new AddContact();
-            AddForm.ShowDialog();
-            contactList.Items.Clear();
 
-            foreach (var item in ComC.people) {
-                contactList.Items.Add(item.FirstName + " " + item.LastName);
+            if (contactList.SelectedIndex >= 0) {
+
+                ComC.ContactIndex = contactList.SelectedIndex;
+                EditContact = new EditContact();
+                EditContact.ShowDialog();
+
+                contactList.Items.Clear();
+
+                foreach (var item in ComC.people) {
+                    contactList.Items.Add(item.FirstName + " " + item.LastName);
+
+                }
 
             }
+            else {
+                AddForm = new AddContact();
+                AddForm.ShowDialog();
+                contactList.Items.Clear();
+
+                foreach (var item in ComC.people) {
+                    contactList.Items.Add(item.FirstName + " " + item.LastName);
+                    
+
+                }
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

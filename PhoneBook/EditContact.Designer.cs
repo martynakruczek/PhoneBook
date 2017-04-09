@@ -1,6 +1,6 @@
 ﻿namespace PhoneBook
 {
-    partial class AddContact
+    partial class EditContact
     {
         /// <summary>
         /// Required designer variable.
@@ -25,7 +25,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddContact));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditContact));
             this.firstName = new System.Windows.Forms.TextBox();
             this.lastName = new System.Windows.Forms.TextBox();
             this.email = new System.Windows.Forms.TextBox();
@@ -85,7 +85,6 @@
             this.phoneNumber.Size = new System.Drawing.Size(149, 20);
             this.phoneNumber.TabIndex = 3;
             this.phoneNumber.Text = "+";
-            this.phoneNumber.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // street
             // 
@@ -208,7 +207,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(196, 47);
             this.label10.TabIndex = 17;
-            this.label10.Text = "Add Contact";
+            this.label10.Text = "Edit Contact";
             // 
             // editAvatar
             // 
@@ -329,7 +328,7 @@
             this.errorLabel3.Text = "* Enter correct birthdate";
             this.errorLabel3.Visible = false;
             // 
-            // AddContact
+            // EditContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -366,9 +365,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "AddContact";
+            this.Name = "EditContact";
             this.Text = "Edit Contact";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.EditContact_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contactAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

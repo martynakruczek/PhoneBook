@@ -12,7 +12,6 @@ namespace PhoneBook
 {
     public partial class ContactDetails : Form
     {
-        AddContact AddContact;
         public ContactDetails() {
             InitializeComponent();
         }

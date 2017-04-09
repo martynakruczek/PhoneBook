@@ -23,3 +23,4 @@ I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.MainForm.r
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.BirthdayAlert.resources
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.ContactDetails.resources
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.AddContact.resources
+I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.EditContact.resources

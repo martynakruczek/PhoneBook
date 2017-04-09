@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditContact.Designer.cs">
+      <DependentUpon>EditContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComC.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -78,6 +84,9 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditContact.resx">
+      <DependentUpon>EditContact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

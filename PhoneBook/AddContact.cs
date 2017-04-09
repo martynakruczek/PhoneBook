@@ -37,15 +37,13 @@ namespace PhoneBook
             p.LastName = lastName.Text;
             p.PhoneNumber = phoneNumber.Text;
             p.Email = email.Text;
-            p.BirthDate = birthDate.Value;
+            if (birthDate.Value.ToShortDateString() != "1753-01-01")
+                p.BirthDate = birthDate.Value;
             p.Street = street.Text;
             p.PostalCode = city.Text;
             p.City = postalCode.Text;
             p.Avatar = contactAvatar.ImageLocation;
 
-            if(birthDate.Value.ToShortDateString() == "2100-04-04") {
-            }
-            
             if (firstName.Text == "") {
                 label2.Text = "First Name*:";
                 label2.ForeColor = System.Drawing.Color.Red;
@@ -59,12 +57,15 @@ namespace PhoneBook
                 label4.Text = "E-mail*:";
                 label4.ForeColor = System.Drawing.Color.Red;
                 errorLabel2.Visible = true;
-            }else if (birthDate.Value.ToShortDateString() == "1753-01-01") {
-                label5.Text = "Birth date*:";
-                label5.ForeColor = System.Drawing.Color.Red;
-                errorLabel3.Visible = true;
             }
             else {
+                if (ComC.people.Count > 0) {
+                    p.Id = ComC.people.Max(x => x.Id) + 1;
+
+                }
+                else {
+                    p.Id = 1;
+                }
                 ComC.people.Add(p);
                 Close();
             }

@@ -78,6 +78,7 @@
             this.contactAvatar.BackColor = System.Drawing.Color.Transparent;
             this.contactAvatar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("contactAvatar.BackgroundImage")));
             this.contactAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.contactAvatar.ErrorImage = null;
             this.contactAvatar.Location = new System.Drawing.Point(253, 162);
             this.contactAvatar.Name = "contactAvatar";
             this.contactAvatar.Size = new System.Drawing.Size(137, 137);

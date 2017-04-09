@@ -66,8 +66,10 @@ namespace PhoneBook
             if (contactList.SelectedIndex >= 0) {
                 if(ComC.IsFiltered == true) {
                     ComC.ContactIndex = contactList.SelectedIndex;
+                    int id = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Id;
                     contactList.Items.RemoveAt(ComC.ContactIndex);
                     ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower());
+                    ComC.people.Remove(ComC.people.Where(x => x.Id == id).ToList().ElementAt(0));
                     
                 }
                 else {
@@ -156,7 +158,7 @@ namespace PhoneBook
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
-
+            ComC.SaveToDB();
         }
     }
 }

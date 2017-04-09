@@ -24,3 +24,5 @@ I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.BirthdayAl
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.ContactDetails.resources
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.AddContact.resources
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.EditContact.resources
+I:\Programowanie IV\Programme\PhoneBook\PhoneBook\bin\Debug\PhoneDB.mdf
+I:\Programowanie IV\Programme\PhoneBook\PhoneBook\bin\Debug\PhoneDB_log.ldf

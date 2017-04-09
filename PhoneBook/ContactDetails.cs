@@ -55,31 +55,32 @@ namespace PhoneBook
                 contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             }
 
-            
 
-            if (lastName.Text == "") {
+            if (lastName.Text == "" || lastName.Text == "                                                  ") {
                 label1.Text = "";
             }
-            if (phoneNumber.Text == "+") {
+            if (phoneNumber.Text == "+" || phoneNumber.Text == "+                                                 ") {
                 label3.Text = "";
                 phoneNumber.Text = "";
             }
-            if (email.Text == "") {
+            if (email.Text == "" || email.Text == "                                                  ") {
                 label4.Text = "";
             }
-            if (birthDate.Text == "") {
+            if (birthDate.Text == "0001-01-01") {
                 label5.Text = "";
+                birthDate.Text = "";
+
             }
-            if (street.Text == "") {
+            if (street.Text == "" || street.Text == "                                                  ") {
                 label7.Text = "";
             }
-            if (city.Text == "") {
+            if (city.Text == "" || city.Text == "                                                  ") {
                 label9.Text = "";
             }
-            if (postalCode.Text == "") {
+            if (postalCode.Text == "" || postalCode.Text == "                                                  ") {
                 label8.Text = "";
             }
-            if (postalCode.Text == "" && street.Text == "" && city.Text == "") {
+            if ((postalCode.Text == "" && street.Text == "" && city.Text == "") || (postalCode.Text == "                                                  " && street.Text == "                                                  " && city.Text == "                                                  ")) {
                 label7.Text = "";
                 label8.Text = "";
                 label9.Text = "";

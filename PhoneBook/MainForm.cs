@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,29 +28,35 @@ namespace PhoneBook
         {
 
             if (contactList.SelectedIndex >= 0) {
+           
 
                 ComC.ContactIndex = contactList.SelectedIndex;
                 EditContact = new EditContact();
                 EditContact.ShowDialog();
 
                 contactList.Items.Clear();
+                ComC.IsFiltered = false;
+                ComC.people = ComC.people.OrderBy(x=>x.FirstName).ToList();
 
                 foreach (var item in ComC.people) {
                     contactList.Items.Add(item.FirstName + " " + item.LastName);
 
                 }
+                
+                
 
             }
             else {
                 AddForm = new AddContact();
                 AddForm.ShowDialog();
                 contactList.Items.Clear();
+                ComC.IsFiltered = false;
 
+                ComC.people = ComC.people.OrderBy(x=>x.FirstName).ToList();
                 foreach (var item in ComC.people) {
                     contactList.Items.Add(item.FirstName + " " + item.LastName);
-                    
-
                 }
+                
             }
             
         }
@@ -57,14 +64,23 @@ namespace PhoneBook
         private void button2_Click(object sender, EventArgs e)
         {
             if (contactList.SelectedIndex >= 0) {
-                ComC.ContactIndex = contactList.SelectedIndex;
-                contactList.Items.RemoveAt(ComC.ContactIndex);
-                ComC.people.RemoveAt(ComC.ContactIndex);
+                if(ComC.IsFiltered == true) {
+                    ComC.ContactIndex = contactList.SelectedIndex;
+                    contactList.Items.RemoveAt(ComC.ContactIndex);
+                    ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower());
+                    
+                }
+                else {
+                    ComC.ContactIndex = contactList.SelectedIndex;
+                    contactList.Items.RemoveAt(ComC.ContactIndex);
+                    ComC.people.RemoveAt(ComC.ContactIndex);
+                }
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+
             if(contactList.SelectedIndex >= 0) {
                 ComC.ContactIndex = contactList.SelectedIndex;
                 ContactDetails = new ContactDetails();
@@ -78,11 +94,13 @@ namespace PhoneBook
         {
             Search = new Search();
             Search.ShowDialog();
-
+            
             if (ComC.Condition != "") {
                 contactList.Items.Clear();
+                ComC.IsFiltered = true;
+                ComC.people = ComC.people.OrderBy(x => x.FirstName).ToList();
 
-                foreach (var item in ComC.people.Where(x => x.FirstName == ComC.Condition)) {
+                foreach (var item in ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower())) {
                     contactList.Items.Add(item.FirstName + " " + item.LastName);
                 }
             }
@@ -91,6 +109,9 @@ namespace PhoneBook
         private void button4_Click(object sender, EventArgs e)
         {
             contactList.Items.Clear();
+
+            ComC.IsFiltered = false;
+            ComC.people = ComC.people.OrderBy(x => x.FirstName).ToList();
 
             foreach (var item in ComC.people) {
                 contactList.Items.Add(item.FirstName +" "+ item.LastName);
@@ -119,6 +140,7 @@ namespace PhoneBook
         private void Form1_Load(object sender, EventArgs e) {
 
             contactList.Items.Clear();
+            ComC.people = ComC.people.OrderBy(x => x.FirstName).ToList();
 
             foreach (var item in ComC.people) {
                 contactList.Items.Add(item.FirstName + " " + item.LastName);
@@ -131,6 +153,10 @@ namespace PhoneBook
                     Birthday.ShowDialog();
                 }
             }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
+
         }
     }
 }

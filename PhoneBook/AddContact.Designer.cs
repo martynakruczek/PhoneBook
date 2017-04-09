@@ -263,6 +263,7 @@
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.button4_Click);
+            this.saveButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.saveButton_KeyPress);
             // 
             // openFileDialog1
             // 

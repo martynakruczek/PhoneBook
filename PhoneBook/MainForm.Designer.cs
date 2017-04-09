@@ -180,6 +180,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "My Phone Book";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);

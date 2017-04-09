@@ -32,21 +32,34 @@ namespace PhoneBook
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            ComC.people.ElementAt(ComC.ContactIndex).FirstName = firstName.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).LastName = lastName.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).PhoneNumber = phoneNumber.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).Email = email.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).BirthDate = birthDate.Value;
-            ComC.people.ElementAt(ComC.ContactIndex).Street = street.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).PostalCode = postalCode.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).City = city.Text;
-            ComC.people.ElementAt(ComC.ContactIndex).Avatar = contactAvatar.ImageLocation;
-            contactAvatar.BackgroundImage = null;
-            contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            if(ComC.IsFiltered == true) {
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).LastName = lastName.Text;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).PhoneNumber = phoneNumber.Text;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Email = email.Text;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).BirthDate = birthDate.Value;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Street = street.Text;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).PostalCode = postalCode.Text;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).City = city.Text;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Avatar = contactAvatar.ImageLocation;
+                ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).FirstName = firstName.Text;
 
-
-            if (birthDate.Value.ToShortDateString() == "2100-04-04") {
+                contactAvatar.BackgroundImage = null;
+                contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
             }
+            else {
+                ComC.people.ElementAt(ComC.ContactIndex).FirstName = firstName.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).LastName = lastName.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).PhoneNumber = phoneNumber.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).Email = email.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).BirthDate = birthDate.Value;
+                ComC.people.ElementAt(ComC.ContactIndex).Street = street.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).PostalCode = postalCode.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).City = city.Text;
+                ComC.people.ElementAt(ComC.ContactIndex).Avatar = contactAvatar.ImageLocation;
+                contactAvatar.BackgroundImage = null;
+                contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            
             
             if (firstName.Text == "") {
                 label2.Text = "First Name*:";
@@ -78,17 +91,33 @@ namespace PhoneBook
 
         private void EditContact_Load(object sender, EventArgs e) {
 
-            firstName.Text = ComC.people.ElementAt(ComC.ContactIndex).FirstName;
-            lastName.Text = ComC.people.ElementAt(ComC.ContactIndex).LastName;
-            phoneNumber.Text = ComC.people.ElementAt(ComC.ContactIndex).PhoneNumber;
-            email.Text = ComC.people.ElementAt(ComC.ContactIndex).Email;
-            birthDate.Text = ComC.people.ElementAt(ComC.ContactIndex).BirthDate.ToShortDateString();
-            street.Text = ComC.people.ElementAt(ComC.ContactIndex).Street;
-            postalCode.Text = ComC.people.ElementAt(ComC.ContactIndex).PostalCode;
-            city.Text = ComC.people.ElementAt(ComC.ContactIndex).City;
-            contactAvatar.ImageLocation = ComC.people.ElementAt(ComC.ContactIndex).Avatar;
-            contactAvatar.BackgroundImage = null;
-            contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            if (ComC.IsFiltered == true) {
+                firstName.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).FirstName;
+                lastName.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).LastName;
+                phoneNumber.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).PhoneNumber;
+                email.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Email;
+                birthDate.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).BirthDate.ToShortDateString();
+                street.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Street;
+                postalCode.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).PostalCode;
+                city.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).City;
+                contactAvatar.ImageLocation = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Avatar;
+                contactAvatar.BackgroundImage = null;
+                contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            else {
+                firstName.Text = ComC.people.ElementAt(ComC.ContactIndex).FirstName;
+                lastName.Text = ComC.people.ElementAt(ComC.ContactIndex).LastName;
+                phoneNumber.Text = ComC.people.ElementAt(ComC.ContactIndex).PhoneNumber;
+                email.Text = ComC.people.ElementAt(ComC.ContactIndex).Email;
+                birthDate.Text = ComC.people.ElementAt(ComC.ContactIndex).BirthDate.ToShortDateString();
+                street.Text = ComC.people.ElementAt(ComC.ContactIndex).Street;
+                postalCode.Text = ComC.people.ElementAt(ComC.ContactIndex).PostalCode;
+                city.Text = ComC.people.ElementAt(ComC.ContactIndex).City;
+                contactAvatar.ImageLocation = ComC.people.ElementAt(ComC.ContactIndex).Avatar;
+                contactAvatar.BackgroundImage = null;
+                contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            
         }
     }
 }

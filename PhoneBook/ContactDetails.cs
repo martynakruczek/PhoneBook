@@ -27,19 +27,37 @@ namespace PhoneBook
 
         private void Form4_Load(object sender, EventArgs e) {
 
-            firstName.Text = ComC.people.ElementAt(ComC.ContactIndex).FirstName;
-            lastName.Text = ComC.people.ElementAt(ComC.ContactIndex).LastName;
-            phoneNumber.Text = ComC.people.ElementAt(ComC.ContactIndex).PhoneNumber;
-            email.Text = ComC.people.ElementAt(ComC.ContactIndex).Email;
-            birthDate.Text = ComC.people.ElementAt(ComC.ContactIndex).BirthDate.ToShortDateString();
-            street.Text = ComC.people.ElementAt(ComC.ContactIndex).Street;
-            postalCode.Text = ComC.people.ElementAt(ComC.ContactIndex).PostalCode;
-            city.Text = ComC.people.ElementAt(ComC.ContactIndex).City;
-            contactAvatar.ImageLocation = ComC.people.ElementAt(ComC.ContactIndex).Avatar;
-            contactAvatar.BackgroundImage = null;
-            contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            if (ComC.IsFiltered == true) {
 
-            if(lastName.Text == "") {
+                firstName.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).FirstName;
+                lastName.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).LastName;
+                phoneNumber.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).PhoneNumber;
+                email.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Email;
+                birthDate.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).BirthDate.ToShortDateString();
+                street.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Street;
+                postalCode.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).PostalCode;
+                city.Text = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).City;
+                contactAvatar.ImageLocation = ComC.people.Where(x => x.FirstName.ToLower() == ComC.Condition.ToLower()).ElementAt(ComC.ContactIndex).Avatar;
+                contactAvatar.BackgroundImage = null;
+                contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            else {
+                firstName.Text = ComC.people.ElementAt(ComC.ContactIndex).FirstName;
+                lastName.Text = ComC.people.ElementAt(ComC.ContactIndex).LastName;
+                phoneNumber.Text = ComC.people.ElementAt(ComC.ContactIndex).PhoneNumber;
+                email.Text = ComC.people.ElementAt(ComC.ContactIndex).Email;
+                birthDate.Text = ComC.people.ElementAt(ComC.ContactIndex).BirthDate.ToShortDateString();
+                street.Text = ComC.people.ElementAt(ComC.ContactIndex).Street;
+                postalCode.Text = ComC.people.ElementAt(ComC.ContactIndex).PostalCode;
+                city.Text = ComC.people.ElementAt(ComC.ContactIndex).City;
+                contactAvatar.ImageLocation = ComC.people.ElementAt(ComC.ContactIndex).Avatar;
+                contactAvatar.BackgroundImage = null;
+                contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+
+            
+
+            if (lastName.Text == "") {
                 label1.Text = "";
             }
             if (phoneNumber.Text == "+") {
@@ -61,7 +79,7 @@ namespace PhoneBook
             if (postalCode.Text == "") {
                 label8.Text = "";
             }
-            if(postalCode.Text == "" && street.Text == "" && city.Text == "") {
+            if (postalCode.Text == "" && street.Text == "" && city.Text == "") {
                 label7.Text = "";
                 label8.Text = "";
                 label9.Text = "";

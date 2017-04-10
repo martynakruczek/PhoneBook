@@ -99,12 +99,12 @@ namespace PhoneBook
             }
         }
 
-        public static string FuckingBD(DateTime fuck) {
-            if(fuck.ToString() == "0001-01-01 00:00:00") {
+        public static string AddDT(DateTime dt) {
+            if(dt.ToString() == "0001-01-01 00:00:00") {
                 return "'0001-01-01 00:00:00'";
             }
             else {
-                return "'"+fuck.ToString()+"'";
+                return "'"+dt.ToString()+"'";
             }
         }
         public static void SaveToDB() {
@@ -117,19 +117,9 @@ namespace PhoneBook
                 }
                 foreach (var item in ComC.people) {
 
-                    string query = "INSERT INTO [Table] (Id, FirstName, LastName, PhoneNumber, Email, BirthDate, Street, PostalCode, City, Avatar) VALUES("+item.Id+","+AddNull(item.FirstName)+","+ AddNull(item.LastName)+","+ AddNull(item.PhoneNumber)+","+ AddNull(item.Email)+","+FuckingBD(item.BirthDate)+","+ AddNull(item.Street)+","+ AddNull(item.PostalCode)+","+ AddNull(item.City)+","+ AddNull(item.Avatar)+")";
+                    string query = "INSERT INTO [Table] (Id, FirstName, LastName, PhoneNumber, Email, BirthDate, Street, PostalCode, City, Avatar) VALUES("+item.Id+","+AddNull(item.FirstName)+","+ AddNull(item.LastName)+","+ AddNull(item.PhoneNumber)+","+ AddNull(item.Email)+","+AddDT(item.BirthDate)+","+ AddNull(item.Street)+","+ AddNull(item.PostalCode)+","+ AddNull(item.City)+","+ AddNull(item.Avatar)+")";
                     using (SqlCommand command = new SqlCommand(query, con)) {
 
-                        //command.Parameters.Add("@Id", item.Id);
-                        //command.Parameters.Add("@FirstName", item.FirstName);
-                        //command.Parameters.Add("@LastName", item.LastName);
-                        //command.Parameters.Add("@PhoneNumber", item.PhoneNumber);
-                        //command.Parameters.Add("@Email", item.Email);
-                        //command.Parameters.Add("@BirthDate", item.BirthDate);
-                        //command.Parameters.Add("@Street", item.Street);
-                        //command.Parameters.Add("@PostalCode", item.PostalCode);
-                        //command.Parameters.Add("@City", item.City);
-                        //command.Parameters.Add("@Avatar", item.Avatar);
                         command.ExecuteNonQuery();
 
                     }

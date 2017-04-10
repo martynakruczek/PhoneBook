@@ -26,3 +26,6 @@ I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.AddContact
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.EditContact.resources
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\bin\Debug\PhoneDB.mdf
 I:\Programowanie IV\Programme\PhoneBook\PhoneBook\bin\Debug\PhoneDB_log.ldf
+F:\Programowanie IV\Programme\PhoneBook\PhoneBook\bin\Debug\PhoneBook.exe.config
+F:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
+F:\Programowanie IV\Programme\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb

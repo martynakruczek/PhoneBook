@@ -119,17 +119,6 @@ namespace PhoneBook
 
                     string query = "INSERT INTO [Table] (Id, FirstName, LastName, PhoneNumber, Email, BirthDate, Street, PostalCode, City, Avatar) VALUES("+item.Id+","+AddNull(item.FirstName)+","+ AddNull(item.LastName)+","+ AddNull(item.PhoneNumber)+","+ AddNull(item.Email)+","+AddDT(item.BirthDate)+","+ AddNull(item.Street)+","+ AddNull(item.PostalCode)+","+ AddNull(item.City)+","+ AddNull(item.Avatar)+")";
                     using (SqlCommand command = new SqlCommand(query, con)) {
-
-                        //command.Parameters.Add("@Id", item.Id);
-                        //command.Parameters.Add("@FirstName", item.FirstName);
-                        //command.Parameters.Add("@LastName", item.LastName);
-                        //command.Parameters.Add("@PhoneNumber", item.PhoneNumber);
-                        //command.Parameters.Add("@Email", item.Email);
-                        //command.Parameters.Add("@BirthDate", item.BirthDate);
-                        //command.Parameters.Add("@Street", item.Street);
-                        //command.Parameters.Add("@PostalCode", item.PostalCode);
-                        //command.Parameters.Add("@City", item.City);
-                        //command.Parameters.Add("@Avatar", item.Avatar);
                         command.ExecuteNonQuery();
 
                     }

@@ -24,7 +24,7 @@ namespace PhoneBook
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addButton_Click(object sender, EventArgs e)
         {
 
             if (contactList.SelectedIndex >= 0) {
@@ -42,9 +42,6 @@ namespace PhoneBook
                     contactList.Items.Add(item.FirstName + " " + item.LastName);
 
                 }
-                
-                
-
             }
             else {
                 AddForm = new AddContact();
@@ -56,12 +53,10 @@ namespace PhoneBook
                 foreach (var item in ComC.people) {
                     contactList.Items.Add(item.FirstName + " " + item.LastName);
                 }
-                
             }
-            
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void deleteButton_Click(object sender, EventArgs e)
         {
             if (contactList.SelectedIndex >= 0) {
                 if(ComC.IsFiltered == true) {
@@ -80,7 +75,7 @@ namespace PhoneBook
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void detailsButton_Click(object sender, EventArgs e)
         {
 
             if(contactList.SelectedIndex >= 0) {
@@ -88,11 +83,9 @@ namespace PhoneBook
                 ContactDetails = new ContactDetails();
                 ContactDetails.ShowDialog();
             }
-            
-
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void searchButton_Click(object sender, EventArgs e)
         {
             Search = new Search();
             Search.ShowDialog();
@@ -108,7 +101,7 @@ namespace PhoneBook
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void showAllButton_Click(object sender, EventArgs e)
         {
             contactList.Items.Clear();
 
@@ -119,14 +112,14 @@ namespace PhoneBook
                 contactList.Items.Add(item.FirstName +" "+ item.LastName);
             }
             foreach (var item in ComC.people) {
-                if (item.BirthDate.Date.Month == DateTime.Today.Month && item.BirthDate.Date.Day == DateTime.Today.Day) {
+                if (item.BirthDate.Substring(0,1) == DateTime.Today.Day.ToString() && item.BirthDate.Substring(3,4) == DateTime.Today.Month.ToString()) {
                     Birthday = new BirthdayAlert(item);
                     Birthday.ShowDialog();
                 }
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void editAvatar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.ShowDialog();
             avatar.ImageLocation = openFileDialog1.FileName;
@@ -134,12 +127,7 @@ namespace PhoneBook
             avatar.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e) {
+        private void MainForm_Load(object sender, EventArgs e) {
 
             contactList.Items.Clear();
             ComC.people = ComC.people.OrderBy(x => x.FirstName).ToList();
@@ -148,9 +136,8 @@ namespace PhoneBook
                 contactList.Items.Add(item.FirstName + " " + item.LastName);
 
             }
-
             foreach (var item in ComC.people) {
-                if(item.BirthDate.Date.Month == DateTime.Today.Month && item.BirthDate.Date.Day == DateTime.Today.Day) {
+                if (item.BirthDate.Substring(0, 2) == DateTime.Today.Day.ToString()){
                     Birthday = new BirthdayAlert(item);
                     Birthday.ShowDialog();
                 }

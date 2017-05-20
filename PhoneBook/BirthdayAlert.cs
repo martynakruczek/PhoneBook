@@ -17,10 +17,7 @@ namespace PhoneBook
         }
         public BirthdayAlert(Person p) {
             InitializeComponent();
-            greetings.Text = "It's " + p.FirstName + " " + p.LastName + " birthday today!";
-        }
-        private void pictureBox1_Click(object sender, EventArgs e) {
-
+            NameLabel.Text = p.FirstName + " " + p.LastName;
         }
     }
 }

@@ -222,7 +222,7 @@
             this.editAvatar.TabStop = true;
             this.editAvatar.Text = "Edit Avatar";
             this.editAvatar.VisitedLinkColor = System.Drawing.Color.Black;
-            this.editAvatar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.editAvatar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.editAvatar_LinkClicked);
             // 
             // contactAvatar
             // 
@@ -235,7 +235,6 @@
             this.contactAvatar.Size = new System.Drawing.Size(137, 137);
             this.contactAvatar.TabIndex = 20;
             this.contactAvatar.TabStop = false;
-            this.contactAvatar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // closeButton
             // 
@@ -248,7 +247,7 @@
             this.closeButton.TabIndex = 22;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.button3_Click);
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // saveButton
             // 
@@ -261,7 +260,7 @@
             this.saveButton.TabIndex = 23;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
-            this.saveButton.Click += new System.EventHandler(this.button4_Click);
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // openFileDialog1
             // 
@@ -270,11 +269,12 @@
             // birthDate
             // 
             this.birthDate.Location = new System.Drawing.Point(78, 223);
-            this.birthDate.MaxDate = new System.DateTime(2100, 4, 4, 0, 0, 0, 0);
+            this.birthDate.MaxDate = new System.DateTime(2016, 4, 4, 0, 0, 0, 0);
+            this.birthDate.MinDate = new System.DateTime(1917, 1, 1, 0, 0, 0, 0);
             this.birthDate.Name = "birthDate";
             this.birthDate.Size = new System.Drawing.Size(149, 20);
             this.birthDate.TabIndex = 24;
-            this.birthDate.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.birthDate.Value = new System.DateTime(1917, 1, 1, 0, 0, 0, 0);
             // 
             // errorLabel
             // 

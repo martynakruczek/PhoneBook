@@ -71,7 +71,7 @@
             this.closeButton.TabIndex = 43;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.button3_Click);
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             // 
             // contactAvatar
             // 
@@ -186,7 +186,6 @@
             this.firstName.Size = new System.Drawing.Size(48, 26);
             this.firstName.TabIndex = 44;
             this.firstName.Text = "Jane";
-            this.firstName.Click += new System.EventHandler(this.label11_Click);
             // 
             // email
             // 
@@ -297,7 +296,7 @@
             this.MaximizeBox = false;
             this.Name = "ContactDetails";
             this.Text = "Contact Details";
-            this.Load += new System.EventHandler(this.Form4_Load);
+            this.Load += new System.EventHandler(this.ContactDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contactAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

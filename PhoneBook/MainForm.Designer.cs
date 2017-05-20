@@ -61,7 +61,7 @@
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Add / Edit";
             this.addButton.UseVisualStyleBackColor = false;
-            this.addButton.Click += new System.EventHandler(this.button1_Click);
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // deleteButton
             // 
@@ -74,7 +74,7 @@
             this.deleteButton.TabIndex = 2;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
-            this.deleteButton.Click += new System.EventHandler(this.button2_Click);
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // searchButton
             // 
@@ -87,7 +87,7 @@
             this.searchButton.TabIndex = 3;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = false;
-            this.searchButton.Click += new System.EventHandler(this.button3_Click);
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // showAllButton
             // 
@@ -100,7 +100,7 @@
             this.showAllButton.TabIndex = 4;
             this.showAllButton.Text = "Show All";
             this.showAllButton.UseVisualStyleBackColor = false;
-            this.showAllButton.Click += new System.EventHandler(this.button4_Click);
+            this.showAllButton.Click += new System.EventHandler(this.showAllButton_Click);
             // 
             // detailsButton
             // 
@@ -113,7 +113,7 @@
             this.detailsButton.TabIndex = 5;
             this.detailsButton.Text = "Details";
             this.detailsButton.UseVisualStyleBackColor = false;
-            this.detailsButton.Click += new System.EventHandler(this.button5_Click);
+            this.detailsButton.Click += new System.EventHandler(this.detailsButton_Click);
             // 
             // avatar
             // 
@@ -129,7 +129,6 @@
             this.avatar.Size = new System.Drawing.Size(93, 87);
             this.avatar.TabIndex = 6;
             this.avatar.TabStop = false;
-            this.avatar.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // openFileDialog1
             // 
@@ -148,7 +147,7 @@
             this.editAvatar.TabStop = true;
             this.editAvatar.Text = "Edit Avatar";
             this.editAvatar.VisitedLinkColor = System.Drawing.Color.Black;
-            this.editAvatar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.editAvatar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.editAvatar_LinkClicked);
             // 
             // contactList
             // 
@@ -181,7 +180,7 @@
             this.Name = "MainForm";
             this.Text = "My Phone Book";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -190,7 +189,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;

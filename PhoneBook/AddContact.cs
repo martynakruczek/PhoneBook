@@ -18,27 +18,21 @@ namespace PhoneBook
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void editAvatar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.ShowDialog();
             contactAvatar.ImageLocation = openFileDialog1.FileName;
             contactAvatar.BackgroundImage = null;
             this.contactAvatar.SizeMode = PictureBoxSizeMode.Zoom;
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
             Person p = new Person();
             p.FirstName = firstName.Text;
             p.LastName = lastName.Text;
             p.PhoneNumber = phoneNumber.Text;
             p.Email = email.Text;
-            if (birthDate.Value.ToShortDateString() != "1753-01-01")
-                p.BirthDate = birthDate.Value;
+            p.BirthDate = birthDate.Text;
             p.Street = street.Text;
             p.PostalCode = city.Text;
             p.City = postalCode.Text;
@@ -71,23 +65,9 @@ namespace PhoneBook
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e) {
-            
-        }
-
-
-
-        private void Form2_Load(object sender, EventArgs e) {
-
-        }
-
-        private void saveButton_KeyPress(object sender, KeyPressEventArgs e) {
-
         }
     }
 }

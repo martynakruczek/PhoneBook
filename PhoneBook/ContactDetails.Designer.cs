@@ -26,18 +26,18 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ContactDetails));
-            this.label10 = new System.Windows.Forms.Label();
+            this.contactDetailsLabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Button();
             this.contactAvatar = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.postalCodeLabel = new System.Windows.Forms.Label();
+            this.streetLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.birthDateLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.phoneNumberLabel = new System.Windows.Forms.Label();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.lastNameLabel = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.Label();
             this.phoneNumber = new System.Windows.Forms.Label();
@@ -49,16 +49,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.contactAvatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // label10
+            // contactDetailsLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(111, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(230, 47);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Contact Details";
+            this.contactDetailsLabel.AutoSize = true;
+            this.contactDetailsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.contactDetailsLabel.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.contactDetailsLabel.Location = new System.Drawing.Point(111, 9);
+            this.contactDetailsLabel.Name = "contactDetailsLabel";
+            this.contactDetailsLabel.Size = new System.Drawing.Size(230, 47);
+            this.contactDetailsLabel.TabIndex = 18;
+            this.contactDetailsLabel.Text = "Contact Details";
             // 
             // closeButton
             // 
@@ -85,96 +85,96 @@
             this.contactAvatar.TabIndex = 41;
             this.contactAvatar.TabStop = false;
             // 
-            // label9
+            // cityLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(79, 322);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 13);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "City:";
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cityLabel.Location = new System.Drawing.Point(79, 322);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(27, 13);
+            this.cityLabel.TabIndex = 40;
+            this.cityLabel.Text = "City:";
             // 
-            // label8
+            // postalCodeLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(262, 322);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Postal code:";
+            this.postalCodeLabel.AutoSize = true;
+            this.postalCodeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.postalCodeLabel.Location = new System.Drawing.Point(262, 322);
+            this.postalCodeLabel.Name = "postalCodeLabel";
+            this.postalCodeLabel.Size = new System.Drawing.Size(66, 13);
+            this.postalCodeLabel.TabIndex = 39;
+            this.postalCodeLabel.Text = "Postal code:";
             // 
-            // label7
+            // streetLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(79, 276);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Street:";
+            this.streetLabel.AutoSize = true;
+            this.streetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.streetLabel.Location = new System.Drawing.Point(79, 276);
+            this.streetLabel.Name = "streetLabel";
+            this.streetLabel.Size = new System.Drawing.Size(38, 13);
+            this.streetLabel.TabIndex = 38;
+            this.streetLabel.Text = "Street:";
             // 
-            // label6
+            // addressLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(132, 245);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 15);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Address";
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.Transparent;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addressLabel.Location = new System.Drawing.Point(132, 245);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(51, 15);
+            this.addressLabel.TabIndex = 37;
+            this.addressLabel.Text = "Address";
             // 
-            // label5
+            // birthDateLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(76, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "Birth date:";
+            this.birthDateLabel.AutoSize = true;
+            this.birthDateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.birthDateLabel.Location = new System.Drawing.Point(76, 194);
+            this.birthDateLabel.Name = "birthDateLabel";
+            this.birthDateLabel.Size = new System.Drawing.Size(55, 13);
+            this.birthDateLabel.TabIndex = 36;
+            this.birthDateLabel.Text = "Birth date:";
             // 
-            // label4
+            // emailLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(76, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 35;
-            this.label4.Text = "E-mail:";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Location = new System.Drawing.Point(76, 110);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(38, 13);
+            this.emailLabel.TabIndex = 35;
+            this.emailLabel.Text = "E-mail:";
             // 
-            // label3
+            // phoneNumberLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(77, 149);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Phone number:";
+            this.phoneNumberLabel.AutoSize = true;
+            this.phoneNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.phoneNumberLabel.Location = new System.Drawing.Point(77, 149);
+            this.phoneNumberLabel.Name = "phoneNumberLabel";
+            this.phoneNumberLabel.Size = new System.Drawing.Size(79, 13);
+            this.phoneNumberLabel.TabIndex = 34;
+            this.phoneNumberLabel.Text = "Phone number:";
             // 
-            // label2
+            // firstNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(76, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "First name:";
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.firstNameLabel.Location = new System.Drawing.Point(76, 65);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(58, 13);
+            this.firstNameLabel.TabIndex = 33;
+            this.firstNameLabel.Text = "First name:";
             // 
-            // label1
+            // lastNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(262, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Last name:";
+            this.lastNameLabel.AutoSize = true;
+            this.lastNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.lastNameLabel.Location = new System.Drawing.Point(262, 65);
+            this.lastNameLabel.Name = "lastNameLabel";
+            this.lastNameLabel.Size = new System.Drawing.Size(59, 13);
+            this.lastNameLabel.TabIndex = 32;
+            this.lastNameLabel.Text = "Last name:";
             // 
             // firstName
             // 
@@ -281,16 +281,16 @@
             this.Controls.Add(this.firstName);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.contactAvatar);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.cityLabel);
+            this.Controls.Add(this.postalCodeLabel);
+            this.Controls.Add(this.streetLabel);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.birthDateLabel);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.phoneNumberLabel);
+            this.Controls.Add(this.firstNameLabel);
+            this.Controls.Add(this.lastNameLabel);
+            this.Controls.Add(this.contactDetailsLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -305,18 +305,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label contactDetailsLabel;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.PictureBox contactAvatar;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.Label postalCodeLabel;
+        private System.Windows.Forms.Label streetLabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label birthDateLabel;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label phoneNumberLabel;
+        private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.Label lastNameLabel;
         private System.Windows.Forms.Label firstName;
         private System.Windows.Forms.Label email;
         private System.Windows.Forms.Label phoneNumber;

@@ -26,21 +26,21 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BirthdayAlert));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBirthdayCake = new System.Windows.Forms.PictureBox();
             this.greetings = new System.Windows.Forms.Label();
             this.NameLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBirthdayCake)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBirthdayCake
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(142, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(103, 128);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBirthdayCake.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBirthdayCake.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBirthdayCake.Location = new System.Drawing.Point(142, 56);
+            this.pictureBirthdayCake.Name = "pictureBirthdayCake";
+            this.pictureBirthdayCake.Size = new System.Drawing.Size(103, 128);
+            this.pictureBirthdayCake.TabIndex = 0;
+            this.pictureBirthdayCake.TabStop = false;
             // 
             // greetings
             // 
@@ -72,14 +72,14 @@
             this.ClientSize = new System.Drawing.Size(414, 224);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.greetings);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBirthdayCake);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "BirthdayAlert";
             this.Text = "Birthday Alert!";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBirthdayCake)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBirthdayCake;
         private System.Windows.Forms.Label greetings;
         private System.Windows.Forms.Label NameLabel;
     }

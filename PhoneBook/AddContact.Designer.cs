@@ -33,26 +33,26 @@
             this.street = new System.Windows.Forms.TextBox();
             this.city = new System.Windows.Forms.TextBox();
             this.postalCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lastNamelabel = new System.Windows.Forms.Label();
+            this.firstNameLabel = new System.Windows.Forms.Label();
+            this.phoneNumberLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.birthDatelabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.streetLabel = new System.Windows.Forms.Label();
+            this.postalCodeLabel = new System.Windows.Forms.Label();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.addContactLabel = new System.Windows.Forms.Label();
             this.editAvatar = new System.Windows.Forms.LinkLabel();
             this.contactAvatar = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.birthDate = new System.Windows.Forms.DateTimePicker();
-            this.errorLabel = new System.Windows.Forms.Label();
-            this.errorLabel1 = new System.Windows.Forms.Label();
-            this.errorLabel2 = new System.Windows.Forms.Label();
-            this.errorLabel3 = new System.Windows.Forms.Label();
+            this.errorNameLabel = new System.Windows.Forms.Label();
+            this.errorPhoneNumberLabel = new System.Windows.Forms.Label();
+            this.errorEmailLabel = new System.Windows.Forms.Label();
+            this.errorBirthLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.contactAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,107 +107,107 @@
             this.postalCode.Size = new System.Drawing.Size(137, 20);
             this.postalCode.TabIndex = 7;
             // 
-            // label1
+            // lastNamelabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(262, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Last name:";
+            this.lastNamelabel.AutoSize = true;
+            this.lastNamelabel.BackColor = System.Drawing.Color.Transparent;
+            this.lastNamelabel.Location = new System.Drawing.Point(262, 67);
+            this.lastNamelabel.Name = "lastNameLabel";
+            this.lastNamelabel.Size = new System.Drawing.Size(59, 13);
+            this.lastNamelabel.TabIndex = 8;
+            this.lastNamelabel.Text = "Last name:";
             // 
-            // label2
+            // firstNameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(75, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "First name:";
+            this.firstNameLabel.AutoSize = true;
+            this.firstNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.firstNameLabel.Location = new System.Drawing.Point(75, 67);
+            this.firstNameLabel.Name = "firstNameLabel";
+            this.firstNameLabel.Size = new System.Drawing.Size(58, 13);
+            this.firstNameLabel.TabIndex = 9;
+            this.firstNameLabel.Text = "First name:";
             // 
-            // label3
+            // phoneNumberLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(75, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Phone number:";
+            this.phoneNumberLabel.AutoSize = true;
+            this.phoneNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.phoneNumberLabel.Location = new System.Drawing.Point(75, 166);
+            this.phoneNumberLabel.Name = "phoneNumberLabel";
+            this.phoneNumberLabel.Size = new System.Drawing.Size(79, 13);
+            this.phoneNumberLabel.TabIndex = 10;
+            this.phoneNumberLabel.Text = "Phone number:";
             // 
-            // label4
+            // emailLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(75, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "E-mail:";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Location = new System.Drawing.Point(75, 118);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(38, 13);
+            this.emailLabel.TabIndex = 11;
+            this.emailLabel.Text = "E-mail:";
             // 
-            // label5
+            // birthDatelabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(75, 207);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Birth date:";
+            this.birthDatelabel.AutoSize = true;
+            this.birthDatelabel.BackColor = System.Drawing.Color.Transparent;
+            this.birthDatelabel.Location = new System.Drawing.Point(75, 207);
+            this.birthDatelabel.Name = "birthDatelabel";
+            this.birthDatelabel.Size = new System.Drawing.Size(55, 13);
+            this.birthDatelabel.TabIndex = 12;
+            this.birthDatelabel.Text = "Birth date:";
             // 
-            // label6
+            // addressLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(124, 249);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 15);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Address";
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.Transparent;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addressLabel.Location = new System.Drawing.Point(124, 249);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(51, 15);
+            this.addressLabel.TabIndex = 13;
+            this.addressLabel.Text = "Address";
             // 
-            // label7
+            // streetLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(78, 278);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(38, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Street:";
+            this.streetLabel.AutoSize = true;
+            this.streetLabel.BackColor = System.Drawing.Color.Transparent;
+            this.streetLabel.Location = new System.Drawing.Point(78, 278);
+            this.streetLabel.Name = "streetLabel";
+            this.streetLabel.Size = new System.Drawing.Size(38, 13);
+            this.streetLabel.TabIndex = 14;
+            this.streetLabel.Text = "Street:";
             // 
-            // label8
+            // postalCodeLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(262, 323);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Postal code:";
+            this.postalCodeLabel.AutoSize = true;
+            this.postalCodeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.postalCodeLabel.Location = new System.Drawing.Point(262, 323);
+            this.postalCodeLabel.Name = "postalCodeLabel";
+            this.postalCodeLabel.Size = new System.Drawing.Size(66, 13);
+            this.postalCodeLabel.TabIndex = 15;
+            this.postalCodeLabel.Text = "Postal code:";
             // 
-            // label9
+            // cityLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(78, 323);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 13);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "City:";
+            this.cityLabel.AutoSize = true;
+            this.cityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.cityLabel.Location = new System.Drawing.Point(78, 323);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(27, 13);
+            this.cityLabel.TabIndex = 16;
+            this.cityLabel.Text = "City:";
             // 
-            // label10
+            // addContactLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(119, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(196, 47);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Add Contact";
+            this.addContactLabel.AutoSize = true;
+            this.addContactLabel.BackColor = System.Drawing.Color.Transparent;
+            this.addContactLabel.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addContactLabel.Location = new System.Drawing.Point(119, 9);
+            this.addContactLabel.Name = "addContactLabel";
+            this.addContactLabel.Size = new System.Drawing.Size(196, 47);
+            this.addContactLabel.TabIndex = 17;
+            this.addContactLabel.Text = "Add Contact";
             // 
             // editAvatar
             // 
@@ -276,57 +276,57 @@
             this.birthDate.TabIndex = 24;
             this.birthDate.Value = new System.DateTime(1917, 1, 1, 0, 0, 0, 0);
             // 
-            // errorLabel
+            // errorNameLabel
             // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.BackColor = System.Drawing.Color.Transparent;
-            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(75, 362);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(132, 15);
-            this.errorLabel.TabIndex = 25;
-            this.errorLabel.Text = "* This field is obligatory";
-            this.errorLabel.Visible = false;
+            this.errorNameLabel.AutoSize = true;
+            this.errorNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.errorNameLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorNameLabel.Location = new System.Drawing.Point(75, 362);
+            this.errorNameLabel.Name = "errorNameLabel";
+            this.errorNameLabel.Size = new System.Drawing.Size(132, 15);
+            this.errorNameLabel.TabIndex = 25;
+            this.errorNameLabel.Text = "* This field is obligatory";
+            this.errorNameLabel.Visible = false;
             // 
-            // errorLabel1
+            // errorPhoneNumberLabel
             // 
-            this.errorLabel1.AutoSize = true;
-            this.errorLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.errorLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.errorLabel1.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel1.Location = new System.Drawing.Point(78, 362);
-            this.errorLabel1.Name = "errorLabel1";
-            this.errorLabel1.Size = new System.Drawing.Size(159, 15);
-            this.errorLabel1.TabIndex = 26;
-            this.errorLabel1.Text = "* Phone number is incorrect";
-            this.errorLabel1.Visible = false;
+            this.errorPhoneNumberLabel.AutoSize = true;
+            this.errorPhoneNumberLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorPhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.errorPhoneNumberLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorPhoneNumberLabel.Location = new System.Drawing.Point(78, 362);
+            this.errorPhoneNumberLabel.Name = "errorPhoneNumberLabel";
+            this.errorPhoneNumberLabel.Size = new System.Drawing.Size(159, 15);
+            this.errorPhoneNumberLabel.TabIndex = 26;
+            this.errorPhoneNumberLabel.Text = "* Phone number is incorrect";
+            this.errorPhoneNumberLabel.Visible = false;
             // 
-            // errorLabel2
+            // errorEmailLabel
             // 
-            this.errorLabel2.AutoSize = true;
-            this.errorLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.errorLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.errorLabel2.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel2.Location = new System.Drawing.Point(75, 362);
-            this.errorLabel2.Name = "errorLabel2";
-            this.errorLabel2.Size = new System.Drawing.Size(113, 15);
-            this.errorLabel2.TabIndex = 27;
-            this.errorLabel2.Text = "* E-mail is incorrect";
-            this.errorLabel2.Visible = false;
+            this.errorEmailLabel.AutoSize = true;
+            this.errorEmailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.errorEmailLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorEmailLabel.Location = new System.Drawing.Point(75, 362);
+            this.errorEmailLabel.Name = "errorEmailLabel";
+            this.errorEmailLabel.Size = new System.Drawing.Size(113, 15);
+            this.errorEmailLabel.TabIndex = 27;
+            this.errorEmailLabel.Text = "* E-mail is incorrect";
+            this.errorEmailLabel.Visible = false;
             // 
-            // errorLabel3
+            // errorBirthLabel
             // 
-            this.errorLabel3.AutoSize = true;
-            this.errorLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.errorLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.errorLabel3.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel3.Location = new System.Drawing.Point(75, 362);
-            this.errorLabel3.Name = "errorLabel3";
-            this.errorLabel3.Size = new System.Drawing.Size(135, 15);
-            this.errorLabel3.TabIndex = 28;
-            this.errorLabel3.Text = "* Enter correct birthdate";
-            this.errorLabel3.Visible = false;
+            this.errorBirthLabel.AutoSize = true;
+            this.errorBirthLabel.BackColor = System.Drawing.Color.Transparent;
+            this.errorBirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.errorBirthLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorBirthLabel.Location = new System.Drawing.Point(75, 362);
+            this.errorBirthLabel.Name = "errorBirthLabel";
+            this.errorBirthLabel.Size = new System.Drawing.Size(135, 15);
+            this.errorBirthLabel.TabIndex = 28;
+            this.errorBirthLabel.Text = "* Enter correct birthdate";
+            this.errorBirthLabel.Visible = false;
             // 
             // AddContact
             // 
@@ -336,25 +336,25 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(414, 419);
-            this.Controls.Add(this.errorLabel3);
-            this.Controls.Add(this.errorLabel2);
-            this.Controls.Add(this.errorLabel1);
-            this.Controls.Add(this.errorLabel);
+            this.Controls.Add(this.errorBirthLabel);
+            this.Controls.Add(this.errorEmailLabel);
+            this.Controls.Add(this.errorPhoneNumberLabel);
+            this.Controls.Add(this.errorNameLabel);
             this.Controls.Add(this.birthDate);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.editAvatar);
             this.Controls.Add(this.contactAvatar);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.addContactLabel);
+            this.Controls.Add(this.cityLabel);
+            this.Controls.Add(this.postalCodeLabel);
+            this.Controls.Add(this.streetLabel);
+            this.Controls.Add(this.addressLabel);
+            this.Controls.Add(this.birthDatelabel);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.phoneNumberLabel);
+            this.Controls.Add(this.firstNameLabel);
+            this.Controls.Add(this.lastNamelabel);
             this.Controls.Add(this.postalCode);
             this.Controls.Add(this.city);
             this.Controls.Add(this.street);
@@ -382,25 +382,25 @@
         private System.Windows.Forms.TextBox street;
         private System.Windows.Forms.TextBox city;
         private System.Windows.Forms.TextBox postalCode;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lastNamelabel;
+        private System.Windows.Forms.Label firstNameLabel;
+        private System.Windows.Forms.Label phoneNumberLabel;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label birthDatelabel;
+        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Label streetLabel;
+        private System.Windows.Forms.Label postalCodeLabel;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.Label addContactLabel;
         private System.Windows.Forms.LinkLabel editAvatar;
         private System.Windows.Forms.PictureBox contactAvatar;
         private System.Windows.Forms.Button closeButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DateTimePicker birthDate;
-        private System.Windows.Forms.Label errorLabel;
-        private System.Windows.Forms.Label errorLabel1;
-        private System.Windows.Forms.Label errorLabel2;
-        private System.Windows.Forms.Label errorLabel3;
+        private System.Windows.Forms.Label errorNameLabel;
+        private System.Windows.Forms.Label errorPhoneNumberLabel;
+        private System.Windows.Forms.Label errorEmailLabel;
+        private System.Windows.Forms.Label errorBirthLabel;
     }
 }

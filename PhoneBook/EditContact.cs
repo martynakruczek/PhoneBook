@@ -57,22 +57,22 @@ namespace PhoneBook
             
             
             if (firstName.Text == "") {
-                label2.Text = "First Name*:";
-                label2.ForeColor = System.Drawing.Color.Red;
-                errorLabel.Visible = true;
+                firstNameLabel.Text = "First Name*:";
+                firstNameLabel.ForeColor = System.Drawing.Color.Red;
+                errorNameLabel.Visible = true;
             }else if(phoneNumber.Text != "+" && !Regex.Match(phoneNumber.Text, @"^(\+[0-9]{9})$").Success) {
-                label3.Text = "Phone number*:";
-                label3.ForeColor = System.Drawing.Color.Red;
-                errorLabel1.Visible = true;
+                phoneNumberLabel.Text = "Phone number*:";
+                phoneNumberLabel.ForeColor = System.Drawing.Color.Red;
+                errorPhoneLabel.Visible = true;
             }else if(email.Text != "" && !Regex.Match(email.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").Success) {
                 
-                label4.Text = "E-mail*:";
-                label4.ForeColor = System.Drawing.Color.Red;
-                errorLabel2.Visible = true;
+                emailLabel.Text = "E-mail*:";
+                emailLabel.ForeColor = System.Drawing.Color.Red;
+                errorEmailLabel.Visible = true;
             }else if (birthDate.Value.ToShortDateString() == "1753-01-01") {
-                label5.Text = "Birth date*:";
-                label5.ForeColor = System.Drawing.Color.Red;
-                errorLabel3.Visible = true;
+                birthDateLabel.Text = "Birth date*:";
+                birthDateLabel.ForeColor = System.Drawing.Color.Red;
+                errorBirthDateLabel.Visible = true;
             }
             else {
                 Close();

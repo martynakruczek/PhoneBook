@@ -53,34 +53,34 @@ namespace PhoneBook
             }
 
             if (lastName.Text == "") {
-                label1.Text = "";
+                lastNameLabel.Text = "";
             }
             if (phoneNumber.Text == "+") {
-                label3.Text = "";
+                phoneNumberLabel.Text = "";
                 phoneNumber.Text = "";
             }
             if (email.Text == "") {
-                label4.Text = "";
+                emailLabel.Text = "";
             }
             if (birthDate.Text == "1 stycznia 1917") {
-                label5.Text = "";
+                birthDateLabel.Text = "";
                 birthDate.Text = "";
 
             }
             if (street.Text == "") {
-                label7.Text = "";
+                streetLabel.Text = "";
             }
             if (city.Text == "") {
-                label9.Text = "";
+                cityLabel.Text = "";
             }
             if (postalCode.Text == "") {
-                label8.Text = "";
+                postalCodeLabel.Text = "";
             }
             if (postalCode.Text == "" && street.Text == "" && city.Text == "") {
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
-                label6.Text = "";
+                streetLabel.Text = "";
+                postalCodeLabel.Text = "";
+                cityLabel.Text = "";
+                addressLabel.Text = "";
             }
         }
     }

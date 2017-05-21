@@ -22,7 +22,7 @@ namespace PhoneBook
 
         private void button1_Click(object sender, EventArgs e) {
 
-            ComC.Condition = textBox1.Text;
+            ComC.Condition = searchBox.Text;
             ComC.IsFiltered = true;
             Close();
         }

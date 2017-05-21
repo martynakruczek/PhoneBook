@@ -94,14 +94,6 @@ namespace PhoneBook
             }
         }
 
-        public static string AddDT(DateTime dt) {
-            if(dt.ToString() == "0001-01-01 00:00:00") {
-                return "'0001-01-01 00:00:00'";
-            }
-            else {
-                return "'"+dt.ToString()+"'";
-            }
-        }
         public static void SaveToDB() {
 
             using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=F:\Programowanie IV\Programme\PhoneBook\PhoneBook\PhoneDB.mdf;Integrated Security=True")) {
@@ -111,15 +103,9 @@ namespace PhoneBook
                     command.ExecuteNonQuery();
                 }
                 foreach (var item in ComC.people) {
-
-<<<<<<< HEAD
                     string query = "INSERT INTO [Table] (Id, FirstName, LastName, PhoneNumber, Email, BirthDate, Street, PostalCode, City, Avatar) VALUES("+item.Id+","+AddNull(item.FirstName)+","+ AddNull(item.LastName)+","+ AddNull(item.PhoneNumber)+","+ AddNull(item.Email)+","+AddNull(item.BirthDate)+","+ AddNull(item.Street)+","+ AddNull(item.PostalCode)+","+ AddNull(item.City)+","+ AddNull(item.Avatar)+")";
                     using (SqlCommand command = new SqlCommand(query, con)) {
-=======
-                    string query = "INSERT INTO [Table] (Id, FirstName, LastName, PhoneNumber, Email, BirthDate, Street, PostalCode, City, Avatar) VALUES("+item.Id+","+AddNull(item.FirstName)+","+ AddNull(item.LastName)+","+ AddNull(item.PhoneNumber)+","+ AddNull(item.Email)+","+AddDT(item.BirthDate)+","+ AddNull(item.Street)+","+ AddNull(item.PostalCode)+","+ AddNull(item.City)+","+ AddNull(item.Avatar)+")";
-                    using (SqlCommand command = new SqlCommand(query, con)) {
 
->>>>>>> a8ee02e6a2ab1392381b5806c6838ec023fadcb9
                         command.ExecuteNonQuery();
 
                     }
